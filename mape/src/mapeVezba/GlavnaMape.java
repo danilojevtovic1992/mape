@@ -1,35 +1,39 @@
 package mapeVezba;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import model.Osoba;
 
 public class GlavnaMape {
 
 	public static void main(String[] args) {
 		
-		
-		String adresa = "Knez Mihailov 5";
-		
-		char poslednjiKarakter = adresa.charAt(adresa.length()-1);
-		boolean daLiJeposlednjikarakter = Character.isDigit(poslednjiKarakter);
-		
-		if(daLiJeposlednjikarakter ){
-				System.out.println("Jeste cifra");
-			}else {
-				System.out.println("nije cifra");
-			}
 	
-		System.out.println("Hellouuuuu"); 
-	
-	
-	Osoba osoba = new Osoba ();
-	 osoba.setIma("Nenad");
-	 osoba.setPrezime("Cvijanovic");
-	 osoba.setJmbg("11111111111111");
+	Osoba osoba1 = new Osoba ();
+	 osoba1.setIma("Nenad");
+	 osoba1.setPrezime("Cvijanovic");
+	 osoba1.setJmbg("11111111111111");
 	 
 	 Osoba osoba2= new Osoba ("Danilo", "Jevtovic","3101992910005");
 		
-	 System.out.println(osoba2.getIma());
-	 System.out.println(osoba.getPrezime());
+	List<Osoba>listaOsoba = new ArrayList<Osoba>();
+	listaOsoba.add(osoba1);
+	listaOsoba.add(osoba2);
+	
+	System.out.println(listaOsoba.get(1).getIme());
+	
+	Map<String, String> mapaImena = new HashMap<String, String>(); //inicijalizacija mape!!!
+	
+	mapaImena.put("a1", "Nenad");
+	mapaImena.put("s2", "Pera");
+	mapaImena.put("m3", "Maja");
+	
+	System.out.println("Ime osobe je: " + mapaImena.get("m3"));
+	
+	
 	}
 	
 }

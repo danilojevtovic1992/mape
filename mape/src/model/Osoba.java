@@ -2,7 +2,7 @@ package model;
 
 public class Osoba {
 
-	private String ima;
+	private String ime;
 	private String prezime;
 	private String jmbg;
 	
@@ -12,17 +12,17 @@ public class Osoba {
 	}
 	
 	
-	public Osoba(String ima, String prezime, String jmbg) {
+	public Osoba(String ime, String prezime, String jmbg ) {
 		super();
-		this.ima = ima;
+		this.ime = ime;
 		this.prezime = prezime;
 		this.jmbg = jmbg;
 	}
-	public String getIma() {
-		return ima;
+	public String getIme() {
+		return ime;
 	}
 	public void setIma(String ima) {
-		this.ima = ima;
+		this.ime = ima;
 	}
 	public String getPrezime() {
 		return prezime;
